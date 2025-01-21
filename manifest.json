@@ -1,12 +1,32 @@
-{
+{   "manifest_version": 3,
     "version": "1.0.0",
     "name": "arrowfrog",
-    "version": "1.0.0",
-    "permissions": [ "storage", "tabs" ],
+    "permissions": [ 
+        "storage", 
+        "tabs", 
+        "contextMenus",
+        "menus",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+        "database.js",
+        "background.js"
+        ]
+    },
     "content_scripts": [
         {
-            "matches": [ "https://x.com/*" ],
-            "js": "content.js"
+        "matches": [ 
+            "*https://x.com/*", 
+            "*://*.x.com/*" 
+        ],
+        "js": [
+            "content.js"
+        ],
+        "css": [
+            "content.css"
+        ]
+        
         }
     ]
 }
