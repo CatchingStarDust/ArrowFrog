@@ -21,7 +21,7 @@
             "*://*.x.com/*" 
         ],
         "js": [
-            "usernameCheck.js"
+            "content.js"
         ],
         "css": [
             "content.css"

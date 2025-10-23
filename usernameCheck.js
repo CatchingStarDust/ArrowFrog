@@ -1,1 +1,0 @@
-// checks usernames on twitter and sees if any usernames on the current page matches anyone that is in the Anti database.
