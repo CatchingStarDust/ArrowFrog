@@ -1,0 +1,1 @@
+// this will be the database that holds all the usernames that the extention is supposed to highlight 
