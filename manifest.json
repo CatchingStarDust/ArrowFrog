@@ -1,34 +1,25 @@
-{   "manifest_version": 3,
-    "version": "1.0.0",
-    "name": "arrowfrog",
-    "permissions": [ 
-        "storage", 
-        "tabs", 
-        "contextMenus",
-        "menus",
-        "storage"
-    ],
-    "background": {
-        "scripts": [
-        "database.js",
-        "background.js"
-        ]
-    },
-    "content_scripts": [
-        {
-        "matches": [ 
-            "*https://x.com/*", 
-            "*://*.x.com/*" 
-        ],
-        "js": [
-            "content.js"
-        ],
-        "css": [
-            "content.css"
-        ]
-        
-        }
-    ]
-    
-    
+{
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "name": "arrowfrog",
+
+  "description": "Highlight specific X users in red.",
+
+  "permissions": [],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://*.x.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }
